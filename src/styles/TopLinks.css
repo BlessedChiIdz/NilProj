@@ -13,13 +13,22 @@
     margin: auto;
     display: flex;
     justify-content: space-around;
+    position: relative;
 }
 
 .left{
+    font-size: 4vh;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
     display: inline-block;
     float: left;
 }
 .right{
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    vertical-align: middle;
     display: inline-block;
     float: right;
 }
