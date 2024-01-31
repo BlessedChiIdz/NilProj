@@ -1,9 +1,13 @@
 import React from 'react';
+import "../styles/LinkPageMainPart.css"
+import SortButton from "./modal/SortButton";
 
 const LinkPageMainPart = () => {
     return (
-        <div>
-            
+        <div className="LinkPageMainPart">
+            <div className="Top">
+                <SortButton/>
+            </div>
         </div>
     );
 };
