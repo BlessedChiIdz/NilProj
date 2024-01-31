@@ -5,29 +5,34 @@
     border-color: #E5E7EB;
     text-align: center;
     vertical-align: middle;
-    display: flex;
+    line-height: 135px;
 }
 
 .contentContainer{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
 }
 
 .left{
     font-size: 4vh;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*margin: auto 0;*/
     display: inline-block;
     float: left;
+    height: 100%;
+    vertical-align: middle;
 }
 .right{
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*margin: auto 0;*/
+    height: 100%;
     vertical-align: middle;
     display: inline-block;
     float: right;

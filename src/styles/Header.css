@@ -1,21 +1,24 @@
 .HeaderMain{
+
     border-bottom: 1px solid;
     border-color: #E5E7EB;
     height: 64px;
     width: 100%;
-    text-align: center;
     position: sticky;
     vertical-align: middle;
     line-height: 60px;
-
 }
 .slash{
     vertical-align: middle;
 }
 
 .HeaderContentPart{
-    display: flex;
-    justify-content: space-around;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .circle {
     vertical-align: middle;
