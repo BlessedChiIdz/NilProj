@@ -1,0 +1,49 @@
+.HeaderMain{
+    border-bottom: 1px solid;
+    border-color: #E5E7EB;
+    height: 64px;
+    width: 100%;
+    text-align: center;
+    position: sticky;
+    vertical-align: middle;
+    line-height: 60px;
+
+}
+.slash{
+    vertical-align: middle;
+}
+
+.HeaderContentPart{
+    display: flex;
+    justify-content: space-around;
+}
+.circle {
+    vertical-align: middle;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    background: #D9D9D9
+}
+.circleProfile{
+    background-color: gray;
+    color: white;
+    border: none;
+}
+.Right{
+    display: inline-block;
+    float: right;
+}
+.Left{
+    display: inline-block;
+    float: left;
+}
+.ProfileName{
+    vertical-align: middle;
+    margin-left: 20px;
+    display: inline-block;
+}
