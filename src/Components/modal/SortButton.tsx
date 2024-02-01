@@ -5,16 +5,24 @@ const SortButton = () => {
         <div className="dropdown">
             <input type="checkbox" id="dropdown"/>
             <label htmlFor="dropdown" className="dropdown-btn">
-                <img src="/TriPalochki.png"/>
-                <span>Сортировать</span>
-                <span className="arrow"></span>
+                <img alt="img" src="/TriPalochki.png"/>
+                <span className="SortWord">Сортировать</span>
+                    <svg width="15px" height="15px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" >
+
+                        <path d="M0 0h48v48H0z" fill="none"/>
+                        <g id="Shopicon">
+                            <g>
+                                <polygon points="24,29.171 9.414,14.585 6.586,17.413 24,34.827 41.414,17.413 38.586,14.585 		"/>
+                            </g>
+                        </g>
+                    </svg>
             </label>
 
             <ul className="dropdown-content" role="menu">
-                <li><a href="#">React</a></li>
-                <li><a href="#">Angular</a></li>
-                <li><a href="#">Vue</a></li>
-                <li><a href="#">Svelte</a></li>
+                <li><a href="1">Дата ↓</a></li>
+                <li><a href="2">Дата ↑</a></li>
+                <li><a href="3">Алфовит ↓</a></li>
+                <li><a href="4">Алфовит ↑</a></li>
             </ul>
         </div>
     );

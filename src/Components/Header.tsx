@@ -7,7 +7,7 @@ const Header = () => {
             <div className="HeaderContentPart">
                 <div className="Left">
                     <div className="circle">L</div>
-                    <img src="/svgmargin1019-g2i.svg" className="slash"/>
+                    <img alt="img" src="/svgmargin1019-g2i.svg" className="slash"/>
                     <ProfileCircle word={"A"}/>
                     <div className="ProfileName">Profile Name</div>
                 </div>

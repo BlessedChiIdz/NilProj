@@ -1,11 +1,10 @@
 .CreateLinkButton{
-    background-color: #000;
+    background-color: gray;
     color: white;
-
 }
 
 .custom-btn {
-    width: 130px;
+    width: 170px;
     height: 40px;
     color: #fff;
     border-radius: 5px;
@@ -24,7 +23,7 @@
 }
 
 .btn-8 {
-    background-color: black;
+    background-color: gray;
     line-height: 42px;
     padding: 0;
     border: none;
@@ -41,7 +40,7 @@
     content: "";
     right: 0;
     bottom: 0;
-    background: black;
+    background: gray;
     /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
                 -4px -4px 6px 0 rgba(116, 125, 136, .2),
       inset -4px -4px 6px 0 rgba(255,255,255,.5),
@@ -66,7 +65,7 @@
     background: transparent;
 }
 .btn-8 span:hover{
-    color: black;
+    color: gray;
 }
 .btn-8 span:before,
 .btn-8 span:after {
@@ -74,7 +73,7 @@
     content: "";
     left: 0;
     top: 0;
-    background: black;
+    background: gray;
     /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
                 -4px -4px 6px 0 rgba(116, 125, 136, .2),
       inset -4px -4px 6px 0 rgba(255,255,255,.5),
