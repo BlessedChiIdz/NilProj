@@ -20,7 +20,6 @@ const LinkPageMainPart = () => {
             <div className="MainContainer">
                 <div className="FilerContainer">
                     <Filter/>
-                    <Search/>
                 </div>
                 <div className="LinksContainer">
                     {flag ? (

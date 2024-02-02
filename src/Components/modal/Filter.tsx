@@ -1,5 +1,6 @@
 import React from 'react';
 import "../../styles/Filer.css"
+import Tags from "./Tags";
 
 const Filter = () => {
     return (
@@ -20,9 +21,9 @@ const Filter = () => {
                     placeholder={"Поиск..."}
                 />
             </div>
-            <hr className="hrForFilter"/>
-            <div>
-
+            <hr className="hrForFilter"></hr>
+            <div className="TagsMainContainer">
+                <Tags/>
             </div>
         </div>
     );

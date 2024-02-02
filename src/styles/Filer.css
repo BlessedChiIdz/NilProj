@@ -6,7 +6,7 @@
 
 .name{
     padding-top: 10%;
-    font-size: 1.3vw;
+    font-size: calc(1vh + 0.8vw);
     text-align: left;
     margin-left: 20%;
     font-weight: bold;
@@ -18,7 +18,7 @@
     width: 85%;
     display: inline-block;
     vertical-align: middle;
-    font-size: 1vw;
+    font-size: calc(0.7vh + 0.5vw);
 }
 .svgLupa{
     margin: auto;
@@ -30,7 +30,7 @@
     height: 50px;
     font-size: 1.5vh;
     width: 80%;
-    margin: 2vh auto 4vh;
+    margin: 1vw auto 2vw;
     border: solid 2px #d7d7d7;
     border-radius: 5px;
     position: relative;
@@ -44,6 +44,9 @@
     display: inline-block;
 }
 .hrForFilter{
+    height: 2px;
+    border: 0;
+    background-color: #D1D5DB;
     width: 80%;
-    margin: auto auto 6vh;
+    margin: auto auto 2vw;
 }
