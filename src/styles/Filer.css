@@ -3,6 +3,7 @@
     height: 20%;
     position: relative;
 }
+
 .name{
     padding-top: 10%;
     font-size: 1.3vw;
@@ -17,29 +18,32 @@
     width: 85%;
     display: inline-block;
     vertical-align: middle;
+    font-size: 1vw;
 }
 .svgLupa{
-    margin: 0;
+    margin: auto;
     height: 50%;
-    vertical-align: middle;
 }
 
 .searchBlock{
-    margin: auto;
     text-align: center;
-    margin-top: 2vh;
     height: 50px;
     font-size: 1.5vh;
     width: 80%;
-    margin-bottom: 2vh;
+    margin: 2vh auto 4vh;
     border: solid 2px #d7d7d7;
     border-radius: 5px;
     position: relative;
     display: flex;
+
  }
 .LupaContainer{
     padding: 0;
     margin: 0;
     width: 10%;
     display: inline-block;
+}
+.hrForFilter{
+    width: 80%;
+    margin: auto auto 6vh;
 }
