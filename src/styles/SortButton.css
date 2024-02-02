@@ -10,7 +10,7 @@
     font-size: 18px;
     width: 100%;
     border: none;
-    color: #000000;
+    color: gray;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,7 +22,7 @@
 .arrow {
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 6px solid #000000;
+    border-top: 6px solid gray;
     transition: transform ease-in-out 0.3s;
 }
 
@@ -43,7 +43,7 @@ input[type="checkbox"]:checked ~ .dropdown-content {
 }
 
 .dropdown-content li {
-    background: #2f3238;
+    background: gray;
     border-radius: 0.5em;
 }
 
@@ -61,13 +61,13 @@ input[type="checkbox"]:focus + label {
 }
 
 .dropdown-content li:hover {
-    background: #1d1f24;
+    background: gray;
 }
 
 .dropdown-content li a {
     display: block;
     padding: 0.7em 0.5em;
-    color: #fff;
+    color: white;
     margin: 0.1em 0;
     text-decoration: none;
 }

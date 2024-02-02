@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 750px;
+    height: 78vh;
     background-color: #f1f1f1;
     text-align: center;
 }
@@ -20,7 +20,7 @@
     margin-top: 2%;
 }
 .MainContainer{
-    margin-top: 1%;
+    padding-top: 1%;
     height: auto;
     padding-left: 5%;
     padding-right: 5%;
@@ -28,9 +28,10 @@
     margin-right: auto;
     position: relative;
     max-width: 1600px;
-    height: 90%;
+    height: 80%;
 }
 .FilerContainer{
+    border-radius: 10px;
     float: left;
     width: 30%;
     height: auto;
@@ -38,6 +39,7 @@
     display: inline-block;
 }
 .LinksContainer{
+    border-radius: 10px;
     float: right;
     display: inline-block;
     width: 65%;

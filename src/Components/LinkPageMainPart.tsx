@@ -3,7 +3,7 @@ import "../styles/LinkPageMainPart.css"
 import SortButton from "./modal/SortButton";
 import Filter from "./modal/Filter";
 import Search from "./modal/Search";
-import NoLinks from "./modal/noLinks";
+import NoLinks from "./noLinks";
 
 const LinkPageMainPart = () => {
     const [flag, setFlag] = useState(false);
