@@ -50,3 +50,8 @@
     width: 80%;
     margin: auto auto 2vw;
 }
+.filterCheckbox{
+    opacity: 1;
+    width: 1vw;
+    height: 1vw;
+}

@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "../../styles/Filer.css"
 import Tags from "./Tags";
+import {FilterProps} from "../../LogicComp/FilterProp";
+
+
 
 const Filter = () => {
+    const [checkedState, setCheckedState] = useState(
+        new Array(FilterProps.length).fill(false)
+    );
     return (
         <div className="Filter">
             <div className="name">
@@ -25,6 +31,15 @@ const Filter = () => {
             <div className="TagsMainContainer">
                 <Tags/>
             </div>
+            <div className="TagsDropListMainContainer">
+                {checkedState.map(state=>
+                    <div>
+                        <input type="checkbox" className="filterCheckbox" defaultChecked={true} />
+                        <div className="filterTagName">qwe</div>
+                    </div>
+                )}
+            </div>
+
         </div>
     );
 };
