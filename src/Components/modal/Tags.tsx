@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import "../../styles/Tags.css"
 const Tags = () => {
+
     return (
         <div className="TagsContainer">
             <button className="TagsButtonContainer">
