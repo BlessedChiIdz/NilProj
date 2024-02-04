@@ -37,9 +37,10 @@ const Filter = () => {
 
                     <div className="TagsDropContainer">
                         <div className="checkboxAndName">
-
-                            <input type="checkbox" id="reading" className="checkboxTag"></input>
-                            <label htmlFor="reading" className="checkboxLable"></label>
+                            <div className="fieldGroup">
+                                <input type="checkbox" id="reading" className="checkboxTag"></input>
+                                <label htmlFor="reading" className="checkboxLable"></label>
+                            </div>
                             <div className="checkboxName">{prop.nameS}</div>
                         </div>
                         <div className="ClickCount">1</div>
