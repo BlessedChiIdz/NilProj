@@ -50,8 +50,41 @@
     width: 80%;
     margin: auto auto 2vw;
 }
-.filterCheckbox{
-    opacity: 1;
-    width: 1vw;
-    height: 1vw;
+.TagsDropListMainContainer{
+    margin-top: 5%;
+}
+.TagsDropContainer{
+    border-radius: 10px;
+    align-items: center;
+    height: 40px;
+    background-color: #F9FAFB;
+    justify-content: space-between;
+    width: 80%;
+    display: flex;
+    margin: auto auto 10px;
+    padding-left: 5%;
+}
+.checkboxTag{
+    position: relative;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+.checkboxLable:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.checkboxName{
+    display: inline-block;
+    padding-left: 10%;
+}
+.checkboxAndName{
+    display: inline-flex;
+}
+.ClickCount{
+    padding-right: 5%;
 }

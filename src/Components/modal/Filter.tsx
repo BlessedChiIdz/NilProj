@@ -9,6 +9,7 @@ const Filter = () => {
     const [checkedState, setCheckedState] = useState(
         new Array(FilterProps.length).fill(false)
     );
+    {console.log(checkedState)}
     return (
         <div className="Filter">
             <div className="name">
@@ -32,10 +33,16 @@ const Filter = () => {
                 <Tags/>
             </div>
             <div className="TagsDropListMainContainer">
-                {checkedState.map(state=>
-                    <div>
-                        <input type="checkbox" className="filterCheckbox" defaultChecked={true} />
-                        <div className="filterTagName">qwe</div>
+                {FilterProps.map(prop=>
+
+                    <div className="TagsDropContainer">
+                        <div className="checkboxAndName">
+
+                            <input type="checkbox" id="reading" className="checkboxTag"></input>
+                            <label htmlFor="reading" className="checkboxLable"></label>
+                            <div className="checkboxName">{prop.nameS}</div>
+                        </div>
+                        <div className="ClickCount">1</div>
                     </div>
                 )}
             </div>

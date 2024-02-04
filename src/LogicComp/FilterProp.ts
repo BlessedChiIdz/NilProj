@@ -1,10 +1,10 @@
 interface FilterPropInterface{
     isEnable:boolean;
-    name:string;
+    nameS:string;
 }
 
 export const FilterProps:FilterPropInterface[] = [
-    {isEnable:false,name:"Market"},
-    {isEnable:false,name:"Magazine"},
-    {isEnable:false,name:"Git"},
+    {isEnable:false,nameS:"Market"},
+    {isEnable:false,nameS:"Magazine"},
+    {isEnable:false,nameS:"Git"},
 ]
