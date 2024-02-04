@@ -10,7 +10,7 @@ const Filter = () => {
     const [checkedState, setCheckedState] = useState(
         new Array(FilterProps.length).fill(false)
     );
-
+    const [hide,setHide] = useState(false)
     const revertState = (ind:number) => {
         let obj = checkedState;
         if(obj[ind] === false){
@@ -35,12 +35,22 @@ const Filter = () => {
         }
     }
 
-    const tegsList = useRef(null);
-    const hide = () => {
-        if(tegsList.current!==null && tegsList instanceof HTMLElement){
-            tegsList.style.backgroundColor = "black"
+    const tegsList:any = useRef(null);
+
+    const hideTags = (event:MouseEvent<HTMLButtonElement>) =>{
+        if(tegsList !== null){
+            if(hide===false){
+                tegsList.current.style.display = "none"
+                setHide(true)
+            }
+
+            else{
+                tegsList.current.style.display = "block"
+                setHide(false)
+            }
         }
     }
+
     return (
         <div className="Filter">
             <div className="name">
@@ -61,7 +71,7 @@ const Filter = () => {
             </div>
             <hr className="hrForFilter"></hr>
             <div className="TagsMainContainer">
-                <Tags/>
+                <Tags click={hideTags}/>
             </div>
             <div className="TagsDropListMainContainer" ref={tegsList}>
                 {FilterProps.map((prop,index)=>

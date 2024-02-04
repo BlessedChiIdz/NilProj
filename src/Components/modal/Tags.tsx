@@ -1,12 +1,19 @@
-import React, {useRef} from 'react';
+import React, {forwardRef, MouseEvent, useCallback, useRef} from 'react';
 import "../../styles/Tags.css"
-const Tags = () => {
+
+
+
+interface tags{
+    click: ((event: MouseEvent<HTMLButtonElement>) => void),
+}
+
+const Tags = (props:tags)  => {
+
 
     return (
         <div className="TagsContainer">
-            <button className="TagsButtonContainer">
+            <button className="TagsButtonContainer" onClick={props.click}>
                 <svg className="TegsSvg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" >
-
                     <path d="M0 0h48v48H0z" fill="none"/>
                     <g id="Shopicon">
                         <g>

@@ -51,6 +51,7 @@
     margin: auto auto 2vw;
 }
 .TagsDropListMainContainer{
+    display: block;
     padding-top: 5%;
 }
 .TagsDropContainer{
