@@ -79,3 +79,7 @@
     display: flex;
     align-items: center;
 }
+
+.TagsMainContainer{
+    padding-bottom: 5%;
+}
