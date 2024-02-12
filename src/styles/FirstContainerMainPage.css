@@ -1,0 +1,11 @@
+.ShortLink{
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 60px;
+    text-align: center;
+    margin-top: 5%;
+    background-image: linear-gradient(#6A11CB,#2575FC);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
