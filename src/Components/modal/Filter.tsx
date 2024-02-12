@@ -8,8 +8,13 @@ import ButtonCheck from "./buttonCheck";
 
 const Filter = () => {
     const [checkedState, setCheckedState] = useState(
-        new Array(FilterProps.length).fill(false)
+        new Array(FilterProps.length).fill(false) // переделать, сделать как снизу useState, его передать в фильтры.
     );
+
+    const [arrayOfTags,setArrayOfTegs] = useState(
+        FilterProps
+    )
+    console.log("qweewq = " + arrayOfTags[0].isEnable)
     const [hide,setHide] = useState(false)
     const revertState = (ind:number) => {
         let obj = checkedState;

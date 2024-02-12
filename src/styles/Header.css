@@ -1,12 +1,11 @@
 .HeaderMain{
-
     border-bottom: 1px solid;
     border-color: #E5E7EB;
-    height: 7vh;
+    height: 80px;
     width: 100%;
     position: sticky;
     vertical-align: middle;
-    line-height: 60px;
+    line-height: 72px;
 }
 .slash{
     vertical-align: middle;
@@ -38,6 +37,7 @@
     border: none;
 }
 .Right{
+    margin: auto;
     display: inline-block;
     float: right;
 }

@@ -3,6 +3,12 @@
     z-index: 10;
     position: relative;
     width: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .dropdown-btn {
@@ -10,7 +16,7 @@
     font-size: 18px;
     width: 100%;
     border: none;
-    color: gray;
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,8 +49,9 @@ input[type="checkbox"]:checked ~ .dropdown-content {
 }
 
 .dropdown-content li {
-    background: gray;
+    background: black;
     border-radius: 0.5em;
+
 }
 
 input[type="checkbox"]:checked + label > .arrow {

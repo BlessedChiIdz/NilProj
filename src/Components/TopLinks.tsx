@@ -7,7 +7,7 @@ const TopLinks = () => {
         <div className="mainContainer">
             <div className="contentContainer">
                 <div className="left">
-                    My Links
+                    Мои ссылки
                 </div>
                 <div className="right">
                     <CreateLinkButton/>
