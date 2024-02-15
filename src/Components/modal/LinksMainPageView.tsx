@@ -1,6 +1,7 @@
 import React from 'react';
 import "../../styles/modal/LinksMainPageView.css"
 import {LinksPropTest} from "../../LogicComp/LinksIntMap";
+import LinksMap from "./LinksMap";
 
 const LinksMainPageView = () => {
 
@@ -22,7 +23,7 @@ const LinksMainPageView = () => {
             </div>
             <div>
                 {LinksPropTest.map((el,index)=>(
-                    <div>1</div>
+                    <LinksMap/>
                 ))}
             </div>
         </div>
