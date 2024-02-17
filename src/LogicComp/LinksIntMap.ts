@@ -6,6 +6,8 @@ interface LinksIntMap{
 
 export const LinksPropTest: LinksIntMap[] = [
     {imageURL:"/NILLogo.png",path:"https://app.NilUrl/register",clicksCount:5},
+    {imageURL:"/NILLogo.png",path:"https://app.NilUrl/qweqweqwe",clicksCount:1000},
+    {imageURL:"/NILLogo.png",path:"https://app.NilUrl/register",clicksCount:5},
     {imageURL:"/NILLogo.png",path:"https://app.NilUrl/qweqweqwe",clicksCount:1000}
 ]
 

@@ -78,3 +78,14 @@
 .TriDotMenu{
     margin-left: 12px;
 }
+.InfoMapLinks{
+    padding-top: 20px;
+    margin-top: 20px;
+    color: #6B7280;
+    width: 509px;
+    height: 66px;
+    font-weight: 400;
+    font-size: 14px;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+}

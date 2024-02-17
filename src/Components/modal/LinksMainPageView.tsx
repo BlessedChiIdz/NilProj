@@ -2,7 +2,6 @@ import React from 'react';
 import "../../styles/modal/LinksMainPageView.css"
 import {LinksPropTest} from "../../LogicComp/LinksIntMap";
 import LinksMap from "./LinksMap";
-
 const LinksMainPageView = () => {
 
     return (
@@ -25,6 +24,13 @@ const LinksMainPageView = () => {
                 {LinksPropTest.map((el,index)=>(
                     <LinksMap/>
                 ))}
+            </div>
+            <div className="InfoMapLinks">
+                <div style={{height:"51px",width:"418px",textAlign:"left"}}>
+                Хотите запросить свои ссылки,
+                отредактировать их или посмотреть их аналитику?
+                Создайте бесплатную учетную запись на NilUrl
+                </div>
             </div>
         </div>
     );
