@@ -38,7 +38,8 @@
 @media (min-width: 700px) and (max-width: 1500px){
     .videoPlusAccordions{
     display: flex;
-    width: 100%;
+    margin-left: 0.5%;
+    width: 99%;
     height: 540px;
     border: 1px solid #E5E7EB;
     border-radius: 12px;

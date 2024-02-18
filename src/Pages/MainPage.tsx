@@ -4,6 +4,7 @@ import FirstContainerMainPage from "../Components/FirstContainerMainPage";
 import VideoComp from "../Components/VideoComp";
 import PriceMp from "../Components/PriceMP";
 import "../styles/HeaderMainPage.css"
+import Clients from "../Components/Clients";
 
 const MainPage = () => {
     return (
@@ -12,6 +13,7 @@ const MainPage = () => {
             <FirstContainerMainPage/>
             <VideoComp/>
             <PriceMp/>
+            <Clients/>
         </div>
     );
 };
