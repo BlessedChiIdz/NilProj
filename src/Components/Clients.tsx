@@ -2,7 +2,7 @@ import React from 'react';
 import "../styles/Clients.css"
 const Clients = () => {
     return (
-        <div>
+        <div style={{marginBottom:"50px"}}>
             <div className="Clients">
             Клиенты
             </div>

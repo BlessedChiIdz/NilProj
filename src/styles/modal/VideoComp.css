@@ -71,7 +71,7 @@
         margin-left: 10%;
         display: flex;
         width: 80%;
-        height: 540px;
+        height: 640px;
 
         border-radius: 12px;
         background-color: #C7C7C733;
@@ -99,6 +99,7 @@
 }
 
 .AccordionsMP{
+    overflow: hidden;
     height: 80%;
     width: 35%;
     display: inline-block;
