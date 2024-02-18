@@ -1,4 +1,5 @@
 .MaxWidthContainer{
+
 }
 
 .ShortLink{
@@ -11,6 +12,7 @@
 }
 
 .GradientMP{
+    margin-top: 10px;
     background-image: linear-gradient(#6A11CB,#2575FC);
     color: transparent;
     -webkit-background-clip: text;

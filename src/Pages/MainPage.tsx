@@ -5,6 +5,7 @@ import VideoComp from "../Components/VideoComp";
 import PriceMp from "../Components/PriceMP";
 import "../styles/HeaderMainPage.css"
 import Clients from "../Components/Clients";
+import FooterMP from "../Components/FooterMP";
 
 const MainPage = () => {
     return (
@@ -14,6 +15,7 @@ const MainPage = () => {
             <VideoComp/>
             <PriceMp/>
             <Clients/>
+            <FooterMP/>
         </div>
     );
 };

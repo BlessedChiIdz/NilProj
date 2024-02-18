@@ -11,7 +11,8 @@ const FirstContainerMainPage = () => {
         <div>
             <div className="MaxWidthContainer">
                 <div className="ShortLink">
-                    Короткие ссылки со
+                    <div>Короткие ссылки со</div>
+
                     <div className="GradientMP">
                     Сверхспособностями
                     </div>
