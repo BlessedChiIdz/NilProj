@@ -20,14 +20,29 @@
     -webkit-background-clip: text;
     background-clip: text;
 }
-.podAcordion{
-    margin-top: 20px;
 
+@keyframes Anime {
+    from{
+        height: 1px;
+    }
+    to{
+        height: 80%;
+    }
+}
+.podAcordion{
+    -webkit-transition: height 0.5s linear;
+    -moz-transition: height 0.5s linear;
+    -ms-transition: height 0.5s linear;
+    -o-transition: height 0.5s linear;
+    transition: height 0.5s linear;
+    margin-top: 20px;
     width: 80%;
     font-weight: 400;
     font-size: 14px;
     font-family: Roboto;
     color: #6B7280;
+    animation-name: Anime;
+    animation-duration: 2s;
 }
 .MoreButtonMP:hover{
     background-color: transparent;

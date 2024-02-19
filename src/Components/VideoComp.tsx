@@ -38,9 +38,11 @@ const VideoComp = () => {
                                 (
                                     <div>
                                         <div className = "podAcordion">
+                                            <div>
                                             NilUrl предоставляет мощную аналитику ваших ссылок,
                                             включая информацию о геолокации, устройстве,
                                             браузере и реферере.
+                                            </div>
                                         </div>
                                         <button className="MoreButtonMP">
                                             Подробнее
