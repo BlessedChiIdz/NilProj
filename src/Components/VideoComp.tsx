@@ -36,17 +36,19 @@ const VideoComp = () => {
                         {
                             accView[0] ?
                                 (
-                                    <div>
-                                        <div className = "podAcordion">
-                                            <div>
-                                            NilUrl предоставляет мощную аналитику ваших ссылок,
-                                            включая информацию о геолокации, устройстве,
-                                            браузере и реферере.
+                                    <div style={{height:"100%"}}>
+                                        <div className="divForAnimation">
+                                            <div className = "podAcordion">
+                                                <div>
+                                                NilUrl предоставляет мощную аналитику ваших ссылок,
+                                                включая информацию о геолокации, устройстве,
+                                                браузере и реферере.
+                                                </div>
                                             </div>
+                                            <button className="MoreButtonMP">
+                                                Подробнее
+                                            </button>
                                         </div>
-                                        <button className="MoreButtonMP">
-                                            Подробнее
-                                        </button>
                                     </div>
                                 )
                                 :

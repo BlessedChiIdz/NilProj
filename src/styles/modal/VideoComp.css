@@ -23,26 +23,28 @@
 
 @keyframes Anime {
     from{
-        height: 1px;
+        height: 0;
     }
     to{
-        height: 80%;
+        height: 100%;
     }
 }
+.divForAnimation{
+    animation-name: Anime;
+    animation-duration: 2s;
+
+
+}
 .podAcordion{
-    -webkit-transition: height 0.5s linear;
-    -moz-transition: height 0.5s linear;
-    -ms-transition: height 0.5s linear;
-    -o-transition: height 0.5s linear;
-    transition: height 0.5s linear;
     margin-top: 20px;
     width: 80%;
     font-weight: 400;
     font-size: 14px;
     font-family: Roboto;
     color: #6B7280;
-    animation-name: Anime;
-    animation-duration: 2s;
+    /*animation-name: Anime;*/
+    /*animation-duration: 2s;*/
+    transition: max-height 1s;
 }
 .MoreButtonMP:hover{
     background-color: transparent;
@@ -119,6 +121,12 @@
     width: 35%;
     display: inline-block;
     margin-top: 5%;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
 }
 .Video{
 
