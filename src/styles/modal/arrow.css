@@ -1,0 +1,8 @@
+.arrowMainContainer{
+    height: 8px;
+    width: 8px;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    transition: transform 1s;
+    transform: rotate(45deg);
+}

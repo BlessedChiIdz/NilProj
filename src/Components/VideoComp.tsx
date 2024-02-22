@@ -1,6 +1,7 @@
 import React, {MouseEvent, useCallback, useState} from 'react';
 import "../styles/modal/VideoComp.css"
 import {FilterProps} from "../LogicComp/FilterProp";
+import Arrow from "./modal/arrow";
 
 const VideoComp = () => {
     const [accView, setAccView] = useState(
@@ -117,6 +118,7 @@ const VideoComp = () => {
                     <source src="./Videos/video1.mp4" type="video/mp4"/>
                 </video>
             </div>
+            <Arrow/>
         </div>
     );
 };
