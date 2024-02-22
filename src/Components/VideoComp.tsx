@@ -7,7 +7,10 @@ const VideoComp = () => {
     const [accView, setAccView] = useState(
         new Array(3).fill(false)
     );
-    const setViewFunc = (ind:number) =>{
+    interface setViewFuncInter{
+        (ind:number) : void
+    }
+    const setViewFunc:setViewFuncInter = (ind:number) =>{
         const tempArr = [...accView]
         tempArr[ind] ? tempArr[ind] = false : tempArr[ind] = true
         setAccView(tempArr)
@@ -34,6 +37,7 @@ const VideoComp = () => {
                         <svg onClick={()=>{setViewFunc(0)}} style={{marginLeft:"auto",marginRight:"20px"}} width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.66 12.5L10.66 7.5L5.66003 12.5" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
+                        <Arrow clickProp={setViewFunc} id={0} key={0} />
                         {
                             accView[0] ?
                                 (
@@ -118,7 +122,7 @@ const VideoComp = () => {
                     <source src="./Videos/video1.mp4" type="video/mp4"/>
                 </video>
             </div>
-            <Arrow/>
+
         </div>
     );
 };
