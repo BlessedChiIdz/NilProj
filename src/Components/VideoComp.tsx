@@ -1,11 +1,21 @@
-import React, {createRef, MouseEvent, useCallback, useRef, useState} from 'react';
+import React, {createRef, MouseEvent, useCallback, useEffect, useRef, useState} from 'react';
 import "../styles/modal/VideoComp.css"
 import {FilterProps} from "../LogicComp/FilterProp";
 import Arrow from "./modal/arrow";
 import {useCustomRefHook} from "../hooks/RefHook";
+import YouTube from "react-youtube";
 
 const VideoComp = () => {
+    const videoRef = useCustomRefHook<HTMLIFrameElement>(null)
+    const firstAcc = useCustomRefHook<HTMLUListElement>(null)
     const secondAcc = useCustomRefHook<HTMLUListElement>(null)
+    const thirdAcc = useCustomRefHook<HTMLUListElement>(null)
+    useEffect(()=>{
+        if(videoRef.current!==null){
+            videoRef.current.style.width = "80%";
+            videoRef.current.style.height = "80%";
+        }
+    },[])
     const [accView, setAccView] = useState(
         new Array(3).fill(false)
     );
@@ -19,20 +29,46 @@ const VideoComp = () => {
         setAccView(tempArr)
         switch (ind){
             case 0:
+                if(firstAcc.current!==null){
+                    if(accView[ind] === false){
+                        firstAcc.current.style.transition = "max-height 1s ease-in"
+                        firstAcc.current.style.maxHeight = "14vh"
+                    }
+                    if(accView[ind] === true){
+                        firstAcc.current.style.transition = "max-height 1s ease-in"
+                        firstAcc.current.style.maxHeight = "0"
+                    }
+                }
                 break;
             case 1:
-                //console.log("ind = "+ secondAcc.current);
                 if(secondAcc.current!==null){
+                    if(accView[ind] === false){
                     secondAcc.current.style.transition = "max-height 1s ease-in"
-                    secondAcc.current.style.maxHeight = "500px"
-
+                    secondAcc.current.style.maxHeight = "14vh"
+                    }
+                    if(accView[ind] === true){
+                    secondAcc.current.style.transition = "max-height 1s ease-in"
+                    secondAcc.current.style.maxHeight = "0"
+                    }
+                }
+                break;
+            case 2:
+                if(thirdAcc.current!==null){
+                    if(accView[ind] === false){
+                        thirdAcc.current.style.transition = "max-height 1s ease-in"
+                        thirdAcc.current.style.maxHeight = "14vh"
+                    }
+                    if(accView[ind] === true){
+                        thirdAcc.current.style.transition = "max-height 1s ease-in"
+                        thirdAcc.current.style.maxHeight = "0"
+                    }
                 }
                 break;
         }
 
     }
+    const [youtubeID] = useState('Tbeud0H_gGw')
 
-    console.log(accView)
 
 
     return (
@@ -52,16 +88,16 @@ const VideoComp = () => {
                         </svg>
                         <a className="PodVieoA">Важная аналитика</a>
                         <Arrow clickProp={setViewFunc} id={0} key={0} />
-                        {
-                            accView[0] ?
-                                (
-                                    <div style={{height:"100%"}}>
-                                        <div className="divForAnimation">
+                        <div>
+                            <ul className="menu" ref={firstAcc}>
+                                <li>
+                                    <div>
+                                        <div>
                                             <div className = "podAcordion">
                                                 <div>
-                                                NilUrl предоставляет мощную аналитику ваших ссылок,
-                                                включая информацию о геолокации, устройстве,
-                                                браузере и реферере.
+                                                    NilUrl предоставляет мощную аналитику ваших ссылок,
+                                                    включая информацию о геолокации, устройстве,
+                                                    браузере и реферере.
                                                 </div>
                                             </div>
                                             <button className="MoreButtonMP">
@@ -69,12 +105,9 @@ const VideoComp = () => {
                                             </button>
                                         </div>
                                     </div>
-                                )
-                                :
-                                (<div className = "podAcordionHide">
-
-                                </div>)
-                        }
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div className="AccordionMP">
@@ -127,14 +160,37 @@ const VideoComp = () => {
                         <a className="PodVieoA">Персонализируйте свои ссылки </a>
                         <Arrow clickProp={setViewFunc} id={2} key={2} />
                         <div>
-
+                            <ul className="menu" ref={thirdAcc}>
+                                <li>
+                                    <div>
+                                        <div>
+                                            <div className = "podAcordion">
+                                                <div>
+                                                    NilUrl предоставляет мощную аналитику ваших ссылок,
+                                                    включая информацию о геолокации, устройстве,
+                                                    браузере и реферере.
+                                                </div>
+                                            </div>
+                                            <button className="MoreButtonMP">
+                                                Подробнее
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
                 </div>
-                <video className="Video" controls >
-                    <source src="./Videos/video1.mp4" type="video/mp4"/>
-                </video>
+                <div style={{margin: "auto",width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                    <iframe className='video'
+                            title='Youtube player'
+                            sandbox='allow-same-origin allow-forms allow-popups allow-scripts allow-presentation'
+                            src={`https://youtube.com/embed/${youtubeID}?autoplay=0`}
+                    ref={videoRef}
+                    >
+                            </iframe>
+                </div>
             </div>
 
         </div>
