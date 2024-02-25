@@ -153,3 +153,11 @@
 .podAcordionHide{
     display: none;
 }
+
+.menu{
+    padding: 0;
+    list-style-type: none;
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+}

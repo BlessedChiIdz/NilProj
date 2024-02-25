@@ -1,9 +1,11 @@
-import React, {MouseEvent, useCallback, useState} from 'react';
+import React, {createRef, MouseEvent, useCallback, useRef, useState} from 'react';
 import "../styles/modal/VideoComp.css"
 import {FilterProps} from "../LogicComp/FilterProp";
 import Arrow from "./modal/arrow";
+import {useCustomRefHook} from "../hooks/RefHook";
 
 const VideoComp = () => {
+    const secondAcc = useCustomRefHook<HTMLUListElement>(null)
     const [accView, setAccView] = useState(
         new Array(3).fill(false)
     );
@@ -11,10 +13,25 @@ const VideoComp = () => {
         (ind:number) : void
     }
     const setViewFunc:setViewFuncInter = (ind:number) =>{
+
         const tempArr = [...accView]
         tempArr[ind] ? tempArr[ind] = false : tempArr[ind] = true
         setAccView(tempArr)
+        switch (ind){
+            case 0:
+                break;
+            case 1:
+                //console.log("ind = "+ secondAcc.current);
+                if(secondAcc.current!==null){
+                    secondAcc.current.style.transition = "max-height 1s ease-in"
+                    secondAcc.current.style.maxHeight = "500px"
+
+                }
+                break;
+        }
+
     }
+
     console.log(accView)
 
 
@@ -34,9 +51,6 @@ const VideoComp = () => {
                             <path d="M5 16.6667V13.3333" stroke="#6B7280" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         <a className="PodVieoA">Важная аналитика</a>
-                        <svg onClick={()=>{setViewFunc(0)}} style={{marginLeft:"auto",marginRight:"20px"}} width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.66 12.5L10.66 7.5L5.66003 12.5" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
                         <Arrow clickProp={setViewFunc} id={0} key={0} />
                         {
                             accView[0] ?
@@ -79,19 +93,28 @@ const VideoComp = () => {
                             <path d="M10 17.5V16.6667" stroke="#6B7280" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         <a className="PodVieoA">Бесплатный генератор QR-кодов</a>
-                        <svg onClick={()=>{setViewFunc(1)}} style={{marginLeft:"auto",marginRight:"18px"}} width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.66 12.5L10.66 7.5L5.66003 12.5" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        {
-                            accView[1] ?
-                                (<div className = "podAcordion">
-                                    asd
-                                </div>)
-                                :
-                                (<div className = "podAcordionHide">
+                        <Arrow clickProp={setViewFunc} id={1} key={1}/>
 
-                                </div>)
-                        }
+                        <div>
+                            <ul className="menu" ref={secondAcc}>
+                                <li>
+                                    <div>
+                                        <div>
+                                            <div className = "podAcordion">
+                                                <div>
+                                                    NilUrl предоставляет мощную аналитику ваших ссылок,
+                                                    включая информацию о геолокации, устройстве,
+                                                    браузере и реферере.
+                                                </div>
+                                            </div>
+                                            <button className="MoreButtonMP">
+                                                Подробнее
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div className="AccordionMP">
@@ -102,19 +125,10 @@ const VideoComp = () => {
                         </svg>
 
                         <a className="PodVieoA">Персонализируйте свои ссылки </a>
-                        <svg onClick={()=>{setViewFunc(2)}} style={{marginLeft:"auto",marginRight:"20px"}} width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.66 12.5L10.66 7.5L5.66003 12.5" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        {
-                            accView[2] ?
-                                (<div className = "podAcordion">
-                                    asd
-                                </div>)
-                                :
-                                (<div className = "podAcordionHide">
+                        <Arrow clickProp={setViewFunc} id={2} key={2} />
+                        <div>
 
-                                </div>)
-                        }
+                        </div>
                     </div>
 
                 </div>
