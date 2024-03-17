@@ -8,6 +8,7 @@
     align-items: center;
 }
 .InputLinksMP{
+    outline:0;
     height: 85%;
     width: 80%;
     border: none;
@@ -31,7 +32,9 @@
 .LinksMapOneContainer{
     margin-top: 20px;
     width: 509px;
-    height: 74px;
+    height: max-content;
+    padding-bottom: 10px;
+    padding-top: 10px;
     display: flex;
     align-items: center;
     border: solid 1px #E5E7EB;
@@ -41,10 +44,14 @@
     margin-left: 10px;
 }
 .SmallAndLargeLink{
+    width: 150px;
     display: inline-block;
     text-align: left;
     margin-left: 20px;
     line-height: 25px;
+}
+.VvodMPLinks{
+    cursor: pointer;
 }
 .ButtonsContainerLinksMap{
     margin-left: 55px;
@@ -70,6 +77,7 @@
     vertical-align: middle;
 }
 .CLicksTextANum{
+    text-align: center;
     margin-top: 2px;
     color: #374151;
     font-weight: 400;
@@ -79,7 +87,7 @@
     margin-left: 12px;
 }
 .InfoMapLinks{
-    padding-top: 10px;
+    padding-top: 5px;
     margin-top: 20px;
     color: #6B7280;
     width: 509px;
@@ -87,5 +95,14 @@
     font-weight: 400;
     font-size: 14px;
     border: 1px solid #E5E7EB;
+    border-radius: 6px;
+}
+.containerNoContentMP{
+    margin-top: 20px;
+    width: 509px;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    border: solid 1px #E5E7EB;
     border-radius: 6px;
 }

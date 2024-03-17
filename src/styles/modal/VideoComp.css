@@ -10,7 +10,7 @@
     width: 875px;
     height: 180px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 900;
     font-size: 56px;
 }
 .GradintVordMP{
@@ -118,7 +118,7 @@
 .AccordionsMP{
     overflow: hidden;
     height: 80%;
-    width: 35%;
+    width: 60%;
     display: inline-block;
     margin-top: 5%;
     -webkit-touch-callout: none; /* iOS Safari */
@@ -147,7 +147,7 @@
 .PodVieoA{
 
     font-weight: 600;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .podAcordionHide{

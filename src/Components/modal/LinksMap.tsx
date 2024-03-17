@@ -1,9 +1,16 @@
 import React from 'react';
 import "../../styles/modal/LinksMainPageView.css"
 
-const LinksMap = () => {
+interface LinksMapInt{
+    imageURL:string,
+    path:string,
+    clicks:number;
+}
+
+const LinksMap:React.FC<LinksMapInt>= ({clicks,path,imageURL}:LinksMapInt) => {
     return (
-        <div className="LinksMapOneContainer">
+        clicks !== -1 ? (
+        <div className="LinksMapOneContainer" style={{width:"100%"}}>
             <div className="LogoAndTextLinksMap">
                 <svg style={{paddingBottom:"2px"}} width="30" height="35" viewBox="0 0 30 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_1_488)">
@@ -18,7 +25,7 @@ const LinksMap = () => {
                 </svg>
                 <div className="SmallAndLargeLink">
                     <a href="url" style={{color:"#1E40AF",fontWeight:"600",fontSize:"16px"}}>NilUrl.sh/try</a><br></br>
-                    <a style={{fontWeight:"400",fontSize:"13.56px",color:"#6B7280"}}>https://app.NilUrl.co/register</a>
+                    <a style={{fontWeight:"400",fontSize:"13.56px",color:"#6B7280"}}>{path}</a>
                 </div>
                 <div className="ButtonsContainerLinksMap">
                     <button className="ButtonCircleCopyAndShare">
@@ -44,7 +51,7 @@ const LinksMap = () => {
                         </svg>
                     </button>
                     <button className="countOfViewLinksMap">
-                        <div style={{width:"100%",height:"100%",display:"flex",alignItems:"center"}}>
+                        <div style={{width:"100%",height:"100%",display:"flex",alignItems:"center",justifyContent:"center"}}>
                             <a style={{float:"left",paddingTop:"5px"}}>
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8 13.3334V6.66669" stroke="#374151" stroke-linecap="round" stroke-linejoin="round"/>
@@ -52,7 +59,7 @@ const LinksMap = () => {
                                     <path d="M4 13.3334V10.6667" stroke="#374151" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </a>
-                            <div className="CLicksTextANum">3K clicks</div>
+                            <div className="CLicksTextANum">{clicks} clicks</div>
                         </div>
                     </button>
                 </div>
@@ -67,6 +74,21 @@ const LinksMap = () => {
                 </button>
             </div>
         </div>
+        )
+            :
+        (
+            <div className="containerNoContentMP">
+                <svg style={{marginLeft:"8px"}} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="20" fill="#E5E7EB"/>
+                </svg>
+                <svg style={{marginLeft:"12px"}} width="380" height="50" viewBox="0 0 380 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="112" height="24" rx="6" fill="#E5E7EB"/>
+                    <rect x="120" width="24" height="24" rx="12" fill="#E5E7EB"/>
+                    <rect x="152" width="97" height="24" rx="6" fill="#E5E7EB"/>
+                    <rect y="34" width="380" height="16" rx="6" fill="#E5E7EB"/>
+                </svg>
+            </div>
+        )
     );
 };
 

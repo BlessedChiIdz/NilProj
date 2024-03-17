@@ -22,8 +22,7 @@
     font-size: calc(0.8vh + 0.5vw);
 }
 .AddTagButton{
-    margin: 0;
-    margin-right: 5%;
+    margin: 0 10% 0 0;
     font-size: calc(0.8vh + 0.5vw);
     padding: 7px 13px 7px 13px;
     border-radius: 6px;
