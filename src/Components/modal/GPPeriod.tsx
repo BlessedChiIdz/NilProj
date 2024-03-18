@@ -1,44 +1,125 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import "../../styles/modal/GPPeriod.css"
 
 const GpPeriod = () => {
+    useEffect(()=>{
+        clickToGalki(1);
+    },[])
+    const refToUL = useRef<HTMLUListElement>(null)
+    const refToStrelochka = useRef<SVGSVGElement>(null)
+    const [flagsToGalka,setFlagToGalka] = useState(
+        new Array(6).fill(null)
+    )
+    const [isDrop,setIsDrop] = useState(false)
     const [rule,setRule] = useState(false)
     const [period,setPeriod] = useState("Последние 24 часа")
     const click = () =>{
         setPeriod("Последний час")
     }
+    const clickToGalki = (prop:number) =>{
+        let arr = new Array(6).fill(null);
+        arr.map((value,index)=>{
+            if(index == prop) arr[index] = true;
+        })
+        console.log(arr);
+        setFlagToGalka(arr);
+    }
+    const clickShowUL = () =>{
+        if(!isDrop){
+            if(refToUL.current !=null) {
+                refToUL.current.style.transition = "max-height 1s ease-in"
+                refToUL.current.style.maxHeight = "347px"
+            }
+            if(refToStrelochka.current!=null){
+                refToStrelochka.current.style.transition = "rotate 1s ease-in";
+                refToStrelochka.current.style.rotate = "90deg";
+            }
+            setIsDrop(true);
+        }
+        if(isDrop){
+            if(refToUL.current !=null) {
+                refToUL.current.style.transition = "max-height 1s ease-in"
+                refToUL.current.style.maxHeight = "0px"
+            }
+            if(refToStrelochka.current!=null){
+                refToStrelochka.current.style.transition = "rotate 1s ease-in";
+                refToStrelochka.current.style.rotate = "0deg";
+            }
+            setIsDrop(false)
+        }
+    }
     return (
         <div className="dropdown">
-            <input type="checkbox" id="dropdown"/>
-            <label htmlFor="dropdown" className="dropdown-btn">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clipPath="url(#clip0_326_84)">
-                        <path d="M5.00065 3.99984V0.666504M11.6673 3.99984V0.666504M14.334 11.3332V14.3332H2.33398V12.3332M14.2427 5.6665H2.23532M0.333984 12.1665V12.3332H12.2673L12.3673 12.1665L12.5233 11.8392C13.7154 9.33364 14.334 6.59385 14.334 3.81917V2.33317H2.33398V3.75184C2.33401 6.54796 1.70588 9.30837 0.495984 11.8292L0.333984 12.1665Z" stroke="#2F2F2F"/>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_326_84">
-                            <rect width="16" height="16" fill="white"/>
-                        </clipPath>
-                    </defs>
-                </svg>
-
-                <span className="SortWord">{period}</span>
-                <svg width="15px" height="15px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" >
-
-                    <path d="M0 0h48v48H0z" fill="none"/>
-                    <g id="Shopicon">
-                        <g>
-                            <polygon points="24,29.171 9.414,14.585 6.586,17.413 24,34.827 41.414,17.413 38.586,14.585 		"/>
+            <button className="ButtonToDrop" onClick={(e)=>{clickShowUL();}}>
+                <div className="buttonGPPDrop">
+                    <svg style={{marginRight:"20px"}} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_330_84)">
+                            <path d="M5.00065 3.99984V0.666504M11.6673 3.99984V0.666504M14.334 11.3332V14.3332H2.33398V12.3332M14.2427 5.6665H2.23532M0.333984 12.1665V12.3332H12.2673L12.3673 12.1665L12.5233 11.8392C13.7154 9.33364 14.334 6.59385 14.334 3.81917V2.33317H2.33398V3.75184C2.33401 6.54796 1.70588 9.30837 0.495984 11.8292L0.333984 12.1665Z" stroke="#2F2F2F"/>
                         </g>
-                    </g>
-                </svg>
-            </label>
+                        <defs>
+                            <clipPath id="clip0_330_84">
+                                <rect width="16" height="16" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    {period}
+                    <svg ref={refToStrelochka} style={{marginLeft:"auto"}} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.25939 0.128174C4.12502 0.128174 3.9875 0.181299 3.88437 0.284424C3.67812 0.490674 3.67812 0.828174 3.88437 1.03442L10.9437 8.0938L3.9875 15.05C3.78125 15.2563 3.78125 15.5938 3.9875 15.8C4.19375 16.0063 4.53125 16.0063 4.7375 15.8L12.0719 8.4688C12.2781 8.26255 12.2781 7.92505 12.0719 7.7188L4.6375 0.284424C4.53125 0.178174 4.39689 0.128174 4.25939 0.128174Z" fill="#2F2F2F"/>
+                    </svg>
+                </div>
+            </button>
+            <ul className="ULDP" ref={refToUL}>
+                <li className="LIDP" onClick={(e)=>{setPeriod("Последний час");clickToGalki(0);}}>
+                    <div>Последний час</div>
+                    {
+                        flagsToGalka[0] &&
+                        <div style={{marginLeft:"auto",marginRight:"5px"}}>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.25939 0.128174C4.12502 0.128174 3.9875 0.181299 3.88437 0.284424C3.67812 0.490674 3.67812 0.828174 3.88437 1.03442L10.9437 8.0938L3.9875 15.05C3.78125 15.2563 3.78125 15.5938 3.9875 15.8C4.19375 16.0063 4.53125 16.0063 4.7375 15.8L12.0719 8.4688C12.2781 8.26255 12.2781 7.92505 12.0719 7.7188L4.6375 0.284424C4.53125 0.178174 4.39689 0.128174 4.25939 0.128174Z" fill="#2F2F2F"/>
+                            </svg>
+                        </div>
+                    }
+                </li>
+                <li className="LIDP" onClick={(e)=>{setPeriod("Последние 24 часа");clickToGalki(1);}}>
+                    <div>Последние 24 часа</div>
+                    {
+                        flagsToGalka[1] &&
+                        <div style={{marginLeft:"auto",marginRight:"5px"}}>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.25939 0.128174C4.12502 0.128174 3.9875 0.181299 3.88437 0.284424C3.67812 0.490674 3.67812 0.828174 3.88437 1.03442L10.9437 8.0938L3.9875 15.05C3.78125 15.2563 3.78125 15.5938 3.9875 15.8C4.19375 16.0063 4.53125 16.0063 4.7375 15.8L12.0719 8.4688C12.2781 8.26255 12.2781 7.92505 12.0719 7.7188L4.6375 0.284424C4.53125 0.178174 4.39689 0.128174 4.25939 0.128174Z" fill="#2F2F2F"/>
+                            </svg>
+                        </div>
+                    }
+                </li>
+                <li className="LIDP" onClick={(e)=>{setPeriod("Последние 7 дней");clickToGalki(2);}}>
+                    <div>Последние 7 дней</div>
+                    {
+                        flagsToGalka[2] &&
+                        <div style={{marginLeft:"auto",marginRight:"5px"}}>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.25939 0.128174C4.12502 0.128174 3.9875 0.181299 3.88437 0.284424C3.67812 0.490674 3.67812 0.828174 3.88437 1.03442L10.9437 8.0938L3.9875 15.05C3.78125 15.2563 3.78125 15.5938 3.9875 15.8C4.19375 16.0063 4.53125 16.0063 4.7375 15.8L12.0719 8.4688C12.2781 8.26255 12.2781 7.92505 12.0719 7.7188L4.6375 0.284424C4.53125 0.178174 4.39689 0.128174 4.25939 0.128174Z" fill="#2F2F2F"/>
+                            </svg>
+                        </div>
+                    }
+                </li>
+                <li className="LIDP" onClick={(e)=>{setPeriod("Последние 30 дней");clickToGalki(3);}}>
+                    <div>Последние 30 дней</div>
+                    {
+                        flagsToGalka[3] &&
+                        <div style={{marginLeft:"auto",marginRight:"5px"}}>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.25939 0.128174C4.12502 0.128174 3.9875 0.181299 3.88437 0.284424C3.67812 0.490674 3.67812 0.828174 3.88437 1.03442L10.9437 8.0938L3.9875 15.05C3.78125 15.2563 3.78125 15.5938 3.9875 15.8C4.19375 16.0063 4.53125 16.0063 4.7375 15.8L12.0719 8.4688C12.2781 8.26255 12.2781 7.92505 12.0719 7.7188L4.6375 0.284424C4.53125 0.178174 4.39689 0.128174 4.25939 0.128174Z" fill="#2F2F2F"/>
+                            </svg>
+                        </div>
+                    }
+                </li>
+                <li className="LIDP">
+                    <div>Последние 3 месяца</div>
+                </li>
+                <li className="LIDP">
+                    <div>Последний год</div>
+                </li>
 
-            <ul className="dropdown-content" role="menu">
-                <li onClick={(e)=>{click()}}><a href="1">Последний час</a></li>
-                <li><a href="2">Последние 24 часа</a></li>
-                <li><a href="3">Последние 7 дней</a></li>
-                <li><a href="4">Последние 30 дней</a></li>
             </ul>
         </div>
     );

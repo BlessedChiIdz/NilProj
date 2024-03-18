@@ -9,7 +9,8 @@ const GraphPage = () => {
             <div className="GPMainContainer">
                 <div className="GPCenterContainer">
                     <div className="GPLink">
-                        qwe
+                        NirUrl.com/try
+
                     </div>
                     <div className="GPPeriod">
                         <GPPeriod/>

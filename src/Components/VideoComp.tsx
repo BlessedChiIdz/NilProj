@@ -32,7 +32,7 @@ const VideoComp = () => {
                 if(firstAcc.current!==null){
                     if(accView[ind] === false){
                         firstAcc.current.style.transition = "max-height 1s ease-in"
-                        firstAcc.current.style.maxHeight = "14vh"
+                        firstAcc.current.style.maxHeight = "150px"
                     }
                     if(accView[ind] === true){
                         firstAcc.current.style.transition = "max-height 1s ease-in"
