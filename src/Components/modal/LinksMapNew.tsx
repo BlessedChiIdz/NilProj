@@ -52,10 +52,11 @@ const LinksMapNew:React.FC<LinksMapInt> = ({Data,SvgPath,pathS,pathL,UTM,Android
                                 {pathS}
                             </div>
                             <div style={{display:"inline-block",marginLeft:"5px"}}>
-                                <div className="blockForCopySVG">
+                                <div className="blockForCopySVG" style={{display:"flex"}}>
                                     <svg width="15" height="15" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M4.69974 8.9645H3.69974C3.14724 8.9645 2.69974 8.5085 2.69974 7.9465V2.518C2.69974 1.955 3.14724 1.5 3.69974 1.5H7.69974C8.25224 1.5 8.69974 1.9555 8.69974 2.518V3.451M5.69974 3.536H9.69974C10.2522 3.536 10.6997 3.991 10.6997 4.5535V9.982C10.6997 10.545 10.2522 11 9.69974 11H5.69974C5.14724 11 4.69974 10.5445 4.69974 9.982V4.5535C4.69974 3.9915 5.14724 3.536 5.69974 3.536Z" stroke="#374151" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
+
                                 </div>
                             </div>
                         </div>

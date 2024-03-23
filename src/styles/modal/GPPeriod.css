@@ -1,27 +1,45 @@
 .dropdown{
     width:240px;
     height: 357px;
-    border:1px solid black;
     border-radius:0.5em;
 }
+.SVGinPeriodTop{
+    margin-left:auto;
+    rotate: 90deg;
+}
 .ButtonToDrop{
+    background-color: white;
     width: 240px;
     height: 47px;
     border-radius: 0.5em;
+}
+
+.LIDPBlocked{
+    border-radius: 0.5em;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    font-size:16px;
+    width: 220px;
+    height: 40px;
+    margin:10px;
+    color: gray;
+}
+.LIDPBlocked div{
+    padding-left: 10px;
 }
 .LIDP{
     display: flex;
     align-items: center;
     list-style-type: none;
-    font-size:18px;
+    font-size:16px;
     width: 220px;
     height: 40px;
     margin:10px;
-
 }
+
 .LIDP div{
     padding-left: 10px;
-
 }
 .LIDP:hover{
     border-radius: 0.5em;
@@ -29,7 +47,9 @@
     background-color: #6B7280;
 }
 .ULDP{
-    margin:0;
+    border-radius: 0.5em;
+    box-shadow: 5px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    margin-top: 10px;
     padding-left:0px;
     max-height: 0px;
     overflow: hidden;
@@ -39,3 +59,4 @@
     align-items: center;
     font-size: 14px;
 }
+

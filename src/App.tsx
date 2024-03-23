@@ -6,7 +6,7 @@ import GraphPage from "./Pages/GraphPage";
 function App() {
   return (
     <div className="App">
-        <LinksPage/>
+        <GraphPage/>
     </div>
   );
 }

@@ -3,14 +3,61 @@
     width: 100%;
     justify-content: center;
 }
+.LinkAndPeriod{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .GPCenterContainer{
-    width: 70%;
+    width: 1200px;
+    min-width: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
 }
 .GPLink{
-    display: flex;
+    height: max-content;
     align-items: center;
     justify-content: center;
 }
 .GPPeriod{
+    height: 50px;
     float:right;
+}
+.countOfViewsPeriod{
+    margin-top: 15px;
+    margin-left: 30px;
+    font-size: 56px;
+    font-weight: 550;
+}
+.GlobalCountOfViewText{
+    margin-left: 30px;
+    font-weight: 550;
+    font-size: 20px;
+}
+.Charts{
+    margin-top: 50px;
+    max-width: 1200px;
+    height: 760px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 40px 0px #0000001A;
+}
+
+.OptionsInGP{
+    margin-top: 50px;
+    height: 800px;
+}
+
+.AddressesInGP{
+    width: 48%;
+    height: 400px;
+    box-shadow: 0px 4px 40px 0px #0000001A;
+    border-radius: 10px;
+}
+.DevicesInGP{
+    margin-left: 0%;
+    width: 48%;
+    height: 400px;
+    box-shadow: 0px 4px 40px 0px #0000001A;
+    border-radius: 10px;
 }
