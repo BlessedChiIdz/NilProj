@@ -47,6 +47,8 @@
     background-color: #6B7280;
 }
 .ULDP{
+    position: relative;
+    background-color: white;
     border-radius: 0.5em;
     box-shadow: 5px 4px 8px 0px rgba(34, 60, 80, 0.2);
     margin-top: 10px;

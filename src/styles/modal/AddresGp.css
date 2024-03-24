@@ -16,14 +16,15 @@
 
 }
 .CountryGPinAd{
+    text-align: center;
     cursor: pointer;
     justify-content: center;
     align-items: center;
     width: 104px;
 }
 .CityGPinAd{
+    text-align: center;
     cursor: pointer;
-    margin-left: 40px;
     justify-content: center;
     align-items: center;
     width: 104px;
@@ -36,7 +37,7 @@
     width: 104px;
     height: 34px;
     position: absolute;
-    left: -25px;
+    left: -1px;
     top: -5px;
 }
 .ContainerForCountries{
