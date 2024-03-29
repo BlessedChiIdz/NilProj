@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import MapGP from "./MapGP";
-
+import "../../styles/modal/AddresGp.css"
 const DevicesGp = () => {
 
     const [state,setState] = useState(

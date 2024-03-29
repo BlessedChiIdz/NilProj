@@ -1,5 +1,5 @@
 import React from 'react';
-import "../styles/PriceMP.css"
+import "../../styles/PriceMP.css"
 
 const PriceMp = () => {
     return (
@@ -35,7 +35,7 @@ const PriceMp = () => {
                             Подробнее
                         </span>
                     </button>
-                    <img className="ThreeCardPicMP" src="/TriCard.png"></img>
+                    <img className="ThreeCardPicMP" src="/public/TriCard.png"></img>
                 </div>
             </div>
         </div>

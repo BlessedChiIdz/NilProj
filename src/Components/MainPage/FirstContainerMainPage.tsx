@@ -1,7 +1,7 @@
 import React from 'react';
-import "../styles/FirstContainerMainPage.css"
-import "../styles/ButtonBuyOrTry.css"
-import LinksMainPageView from "./modal/LinksMainPageView";
+import "../../styles/FirstContainerMainPage.css"
+import "../../styles/ButtonBuyOrTry.css"
+import LinksMainPageView from "./LinksMainPageView";
 
 
 const FirstContainerMainPage = () => {

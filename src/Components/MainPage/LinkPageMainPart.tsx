@@ -1,11 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import "../styles/LinkPageMainPart.css"
-import SortButton from "./modal/SortButton";
-import Filter from "./modal/Filter";
-import Search from "./modal/Search";
-import NoLinks from "./noLinks";
-import LinksMap from "./modal/LinksMap";
-import LinksMapNew from "./modal/LinksMapNew";
+import "../../styles/LinkPageMainPart.css"
+
+import Filter from "../LinksPage/Filter";
+import LinksMapNew from "../LinksPage/LinksMapNew";
+import SortButton from "../LinksPage/SortButton";
 
 const LinkPageMainPart = () => {
     const [flag, setFlag] = useState(true);
@@ -27,6 +25,7 @@ const LinkPageMainPart = () => {
                         <LinksMapNew Data={"24/03/24"} clicks={3} pathS={"nil-url.ru/Ffv3cv"} pathL={"https://www.svgrepo.com/collection/dazzle-line-iconsm/collectionqqqqqqqqqqqqqqqqqqqqq"} SvgPath={"/test.svg"} Android={true} IOS={true} UTM={true}/>
                         <LinksMapNew Data={"24/03/24"} clicks={3} pathS={"nil-url.ru/Ffv3cv"} pathL={"https://www.svgrepo.com/collection/dazzle-line-iconsm/collection"} SvgPath={"/test.svg"} Android={false} IOS={false} UTM={true}/>
                         <LinksMapNew Data={"24/03/24"} clicks={3} pathS={"nil-url.ru/Ffv3cv"} pathL={"https://www.svgrepo.com/collection/dazzle-line-iconsm/collection"} SvgPath={"/test.svg"} Android={false} IOS={true} UTM={true}/>
+                        <LinksMapNew Data={"24/03/24"} clicks={3} pathS={"nil-url.ru/Ffv3cv"} pathL={"https://www.svgrepo.com/collection/dazzle-line-iconsm/collectionqqqqqqqqq"} SvgPath={"/test.svg"} Android={false} IOS={true} UTM={true}/>
                 </div>
             </div>
         </div>

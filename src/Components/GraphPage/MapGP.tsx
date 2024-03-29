@@ -1,5 +1,12 @@
 import React from 'react';
 
+
+interface MapGpInterface{
+    SVG:string,
+    clickCount:number,
+    name:string,
+}
+
 const MapGp = () => {
     return (
         <div className="MPContainerGP">

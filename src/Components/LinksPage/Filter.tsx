@@ -63,7 +63,7 @@ const Filter = () => {
             </div>
             <div className="searchBlock">
                     <img
-                        src="/Lupa.svg"
+                        src="/public/Lupa.svg"
                         alt="triangle with all three sides equal"
                         className="svgLupa"
                          />

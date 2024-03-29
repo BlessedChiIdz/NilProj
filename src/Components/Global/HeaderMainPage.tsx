@@ -1,7 +1,6 @@
 import React from 'react';
-import '../styles/HeaderMainPage.css'
-import CreateLinkButton from "./modal/CreateLinkButton";
-import LoginAndRegButton from "./modal/LoginAndRegButton";
+import '../../styles/HeaderMainPage.css'
+import LoginAndRegButton from "../LinksPage/LoginAndRegButton";
 const HeaderMainPage = () => {
     return (
         <div className="mainContainerHeaderMainPage">

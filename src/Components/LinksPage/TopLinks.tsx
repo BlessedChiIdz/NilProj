@@ -1,6 +1,6 @@
 import React from 'react';
 import "../styles/TopLinks.css"
-import CreateLinkButton from "./modal/CreateLinkButton";
+import CreateLinkButton from "../Global/CreateLinkButton";
 
 const TopLinks = () => {
     return (

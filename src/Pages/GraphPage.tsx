@@ -1,12 +1,12 @@
 import React from 'react';
-import HeaderMainPage from "../Components/HeaderMainPage";
+import HeaderMainPage from "../Components/Global/HeaderMainPage";
 import "../styles/GraphPage.css"
-import GPPeriod from "../Components/modal/GPPeriod";
-import Chart from "../Components/modal/Chart";
-import AddresGp from "../Components/modal/AddresGp";
-import DevicesGp from "../Components/modal/DevicesGp";
-import RefsGp from "../Components/modal/RefsGp";
-import TopRefs from "../Components/modal/TopRefs";
+import GPPeriod from "../Components/GraphPage/GPPeriod";
+import Chart from "../Components/GraphPage/Chart";
+import AddresGp from "../Components/GraphPage/AddresGp";
+import DevicesGp from "../Components/GraphPage/DevicesGp";
+import RefsGp from "../Components/GraphPage/RefsGp";
+import TopRefs from "../Components/GraphPage/TopRefs";
 const GraphPage = () => {
     return (
         <div>

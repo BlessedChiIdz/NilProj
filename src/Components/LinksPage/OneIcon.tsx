@@ -1,15 +1,14 @@
 import React from 'react';
 
-
 interface twoIcInter{
     UTM:boolean,
     Android:boolean,
     IOS:boolean,
 }
 
-const TwoIcons:React.FC<twoIcInter> = ({UTM,Android,IOS}:twoIcInter) => {
+const OneIcon:React.FC<twoIcInter> = ({UTM,Android,IOS}:twoIcInter) => {
     return (
-        <div style={{height:"100%"}}>
+        <div style={{paddingRight:"15px"}}>
             { UTM &&
                 <div style={{backgroundColor:"#F3F4F6",borderRadius:"9999px",width:"26px",
                     height:"26px",fontSize:"9px",display:"flex",alignItems:"center",justifyContent:"center",fontWeight:"700",color:"black"}}>
@@ -45,4 +44,4 @@ const TwoIcons:React.FC<twoIcInter> = ({UTM,Android,IOS}:twoIcInter) => {
     );
 };
 
-export default TwoIcons;
+export default OneIcon;

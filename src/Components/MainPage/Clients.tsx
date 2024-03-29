@@ -1,5 +1,5 @@
 import React from 'react';
-import "../styles/Clients.css"
+import "../../styles/Clients.css"
 const Clients = () => {
     return (
         <div style={{marginBottom:"50px"}}>
@@ -7,10 +7,10 @@ const Clients = () => {
             Клиенты
             </div>
             <div className="RowsPicsMP">
-                <img src="/ClientsRow.png" className="PicsMPClients"/>
+                <img src="/public/ClientsRow.png" className="PicsMPClients"/>
             </div>
             <div className="RowsPicsMP">
-                <img src="/ClientsRow2.png" className="PicsMPClients"/>
+                <img src="/public/ClientsRow2.png" className="PicsMPClients"/>
             </div>
         </div>
     );

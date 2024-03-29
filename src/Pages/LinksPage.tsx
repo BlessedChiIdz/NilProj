@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from "../Components/Header";
-import TopLinks from "../Components/TopLinks";
-import LinkPageMainPart from "../Components/LinkPageMainPart";
+import LinkPageMainPart from "../Components/MainPage/LinkPageMainPart";
+import HeaderMainPage from "../Components/Global/HeaderMainPage";
+import TopLinks from "../Components/LinksPage/TopLinks";
 
 const LinksPage = () => {
     return (
         <div>
-            <Header/>
+            <HeaderMainPage/>
             <TopLinks/>
             <LinkPageMainPart/>
         </div>

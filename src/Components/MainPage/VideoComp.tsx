@@ -1,9 +1,7 @@
 import React, {createRef, MouseEvent, useCallback, useEffect, useRef, useState} from 'react';
-import "../styles/modal/VideoComp.css"
-import {FilterProps} from "../LogicComp/FilterProp";
-import Arrow from "./modal/arrow";
-import {useCustomRefHook} from "../hooks/RefHook";
-import YouTube from "react-youtube";
+import "../../styles/modal/VideoComp.css"
+import Arrow from "./arrow";
+import {useCustomRefHook} from "../../hooks/RefHook";
 
 const VideoComp = () => {
     const videoRef = useCustomRefHook<HTMLIFrameElement>(null)
